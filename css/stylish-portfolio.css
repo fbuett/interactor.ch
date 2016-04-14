@@ -183,7 +183,9 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
-
+.contact {
+    padding: 50px;
+}
 
 /* About */
 
@@ -216,47 +218,81 @@ hr.small {
 }
 
 /* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
+.portfolio-box {
+    display: block;
+    position: relative;
     margin: 0 auto;
+    max-width: 650px;
 }
 
-.img-portfolio:hover {
-    opacity: 0.8;
+.portfolio-box .portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    background: rgba(240,95,64,.9);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
 }
 
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
 }
 
-.call-to-action .btn {
-    margin: 10px;
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
-/* Map */
-
-.map {
-    height: 500px;
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-@media(max-width:768px) {
-    .map {
-        height: 75%;
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
     }
 }
 
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 50px 0;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
